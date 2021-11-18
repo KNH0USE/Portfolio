@@ -1,0 +1,300 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none}
+  html {
+    scroll-behavior:smooth;
+  }
+#container .bold {/* 金額部分 */
+  font-weight: bold;
+  color: rgb(236, 85, 85);
+}
+h3{
+  overflow: hidden;
+  color: #555;
+  font-size: 25px;
+  margin: 40px 0;
+  padding-left: 10px;
+  border-left:20px solid #fdb8b8;
+  border-bottom :5px solid #fdb8b8;
+  letter-spacing: 5px;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#header {
+  background-image: url(../items/header.jpg);
+  background-size: cover;
+  width: 100%;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+.headerL {
+ margin:20px 0  200px 10px; 
+}
+.headerL img {
+    padding: 10px;
+  border: 5px solid #fff;
+}
+.headerR ul{
+   display: flex;
+  justify-content: flex-end;
+  gap: 10px; 
+  margin-right: 20px;
+}
+.headerR img {
+  border-radius: 30%;
+}
+.headerR li :hover{
+  position:relative;
+  top:1px;
+}
+.headerBar p {
+  background-color: #f0ee95;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #4b4b4b;
+  text-align: center;
+}
+#container {
+  width: 950px;
+  flex-grow: 1;
+  margin: 0 auto;
+}
+/* メニューリスト */
+#container .menu {
+  display: flex;
+  justify-content: center;
+  position: relative; 
+  padding-top: 20px;
+}
+.menu ul {
+  font-size:20px;
+  font-weight: bold;
+  color: #555555;
+  background-color: fff;
+}
+.menu ul li {
+  list-style: none;
+  margin:0;
+  padding:0;
+  float: left;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  text-align:center;
+  font-weight:bold;
+  }
+  
+.menu ul li a {
+  color: #4D4D4D;
+  display: block;
+  text-decoration: none;
+  }
+  
+.menu ul li ul {
+  position: absolute;
+  top: 40px;
+  width: 150px;
+  z-index: 100;
+  }
+  
+.menu ul li ul li {
+  width: 150px;
+  height:0px;
+  background:#fcb36e;
+  }
+.menu a:hover {
+  opacity: .5;
+}
+.menu ul li:hover,
+.menu ul li a:hover {
+    color: #555;
+    background-color: #ffffff;
+  }  
+.menu ul li ul li:hover,
+.menu ul li ul li a:hover {
+  background:#ff9c3e;
+  }
+  
+ .menu ul li ul li {
+  visibility: hidden;
+  overflow: hidden;
+  }
+  
+.menu ul li:hover ul li,
+.menu ul li a:hover ul li{
+  visibility: visible;
+  overflow: visible;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+  }
+ /*売れ筋ランキング↓*/
+#container .ranking {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.ranking p {
+  margin: 20px;
+}
+.ranking .rank1 img {
+  border: 15px solid #f2e5aa;
+  position: relative;
+  background-color: #fff;
+}
+.rank2 img {
+  border: 15px solid #c4c4c4;
+  position: relative;
+}
+.rank3 img {
+  border: 15px solid #93824a;
+  position: relative;
+}
+/* おすすめアイテムたち */
+#container .recom {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+.recom img {
+  padding: 5px;
+  background-color: #fff;
+  gap: 10px;
+}
+.recom p {
+  margin: 20px;
+}
+/* 新着情報↓ */
+#container .info {
+   margin: 20px auto;
+  font-weight: nomal;
+  width: 60%;
+}
+.info dt {
+  font-size: 16px;
+  float: left;
+  clear: both;
+  padding: 10px 0;
+} 
+.info dd {
+  font-size: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px 0;
+  padding-left: 210px;
+}
+.info .new {
+  font-weight: bold;
+}
+.info a {
+  background-color:red;
+  border-radius:5px;
+  color:#fff;
+  margin:0 20px;
+  padding:5px 15px;
+  text-decoration:none;
+}
+.info .span1{
+  color: #f00;
+  font-size: 16px;
+}
+.info .span2 {
+  border-bottom: 3px dotted #a7a412;
+  font-size: 16px;
+}
+/* 地図 */
+.map {
+  margin: 30px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.map .mapIn {
+  margin-top: 20px;
+  color: #555;
+}
+/* fotterrrr */
+#footer p {
+  padding: 20px 0;
+}
+#footer {
+  background:url(../items/footer.jpg);
+  background-size: cover;
+  color: white;
+  margin-top: auto;
+}
+#footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 10px 0 ;
+}
+#footer .bar {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 60px;
+}
+.footerIn {
+  text-align: center;
+}
+.footerIn img {
+  border-radius: 40%;
+}
+.footerIn li :hover {
+  position:relative;
+  top:1px;
+}
+.footerIn .about {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+} 
+.etc a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.etc a:hover {
+  opacity: .5;
+}
+/* 固定アイコンたち！↓ */
+.bot a{
+  position: fixed;
+	right:40px;
+  bottom: 200px;
+}
+.bot a:hover {
+  position: fixed;
+  right:38px;
+  bottom: 198px;
+}
+.toTop img{
+  border-radius: 20%;
+  opacity: .80;
+}
+.toTop a {
+  position: fixed;
+	right:40px;
+  bottom: 50px;
+}
+.toTop a:hover {
+  position: fixed;
+  right:38px;
+  bottom: 48px;
+}
+.more {
+  text-align: center;
+  margin: 20px 0;
+}
+.more :hover{
+  position:relative;
+  top:1px;
+}
