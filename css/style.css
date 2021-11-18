@@ -1,0 +1,637 @@
+@charset "utf-8" ;
+/* * { 
+  border: 1px solid #000;
+}  */
+
+:root {
+  --main-color: #666666;
+}
+a { 
+  transition: .3s all linear;
+}
+a:hover {
+  color: #d49e9e;
+}
+.inner {
+  max-width: 1000px;
+	margin: 0 auto;
+}
+.hidden {/* for Js */
+	transform: translateY(100%);
+}
+body{
+  font-weight: bold;
+  background: #D77A61 ;
+  transition: 1s;
+}
+html {
+  scroll-behavior:smooth;
+  font-size: 16px; 
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 100%;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+	height: auto;
+}
+/* ｊｓのためのタグ */
+.slide {/* jsのために作られたh1ふんわりタグ */
+  display: block;
+}
+.hidden {/*jsのためのタグ レスポンシブ用*/
+	transform: translateY(100%);
+}
+/* ---------------------
+------------header--- */
+header {
+  width: 100%;
+}
+/* #top header { 
+  height: 300px;
+  width: 100%;
+} */
+header #headerBg {
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  height: 100vh;/* 一画面に変更なら１００ｖｈ */
+}
+header h1 {
+  color: #EFF1F3;
+  font-size: 50px;
+}
+header #headerForh1 {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .sns {
+  position: fixed;
+  top: 100px;/* firefoxとかでずれるから要調整 */
+  left: 0;
+  position: fixed;
+  height: 100%;
+  margin-left: 10px;
+  z-index: 1;
+}
+header .parsonal {
+  color: var(--main-color);
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  padding: 20px 10px;
+  display: flex;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  z-index: 1;
+}
+header .sns > li{
+  padding: 10px 0;
+}
+header .parsonal > li {
+  color: #272727;
+  margin: 10px 0;
+}
+header .parsonal img {
+  transition: .3s all linear;
+}
+header .sns li:hover , .parsonal img:hover {
+  opacity: .3;
+  transition: .3s all linear;
+}
+#bottomBar {/* レスポンシブでfooterに移動する */
+  display: none;
+}
+/* ----------------------------
+----------------Me---------- */ 
+main {
+  margin: 0 auto;
+  text-align: center;
+}
+main #me,#works {/* h2たちのこと */
+  letter-spacing: 15px;
+  font-size: 60px;
+  padding: 200px 0;
+  color: #223843;
+} 
+main section .mySelf {
+  width: 90%;
+  border-radius: 15px;
+  box-shadow:  4px 4px 8px #bcb5ba,-4px -4px 8px #faf1f6;
+}
+main section .twoset {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logotitle {
+  color: #223843;
+  text-align: left;
+  padding: 0 0 20px 50px;
+}
+#logos {
+  padding: 0 20px 20px 20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+main section .twoset>li {
+width: 45%;
+align-items: center;
+}
+main section .twoset img {
+  display: inline-block;
+  border-radius: 40%;
+  width: 200px;
+  height: 200px;
+}
+/* ---------------------
+-------------works--- */
+main h3 {
+  color: #fff;
+  text-align: right;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 30px 40px;
+  width: 60%;
+  /* migi寄せ↓！ */
+  margin: 100px auto 100px 0;
+  border: solid 4px #666;
+  background-color: #666;
+  border-radius: 0 75px 75px 0;
+}
+.title {
+  padding: 100px 0;
+  font-size: 30px;
+  color: #2a6891;
+}
+main section .mine {
+  padding: 100px 100px 100px ;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 20px;
+}
+.webdetail {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--main-color);
+}
+dt {
+  color: #2a6891;
+  width: 20%;
+  margin-top: 10px;
+  text-align: right;
+}
+dd {
+  border-bottom: 1px dotted rgb(126, 126, 126);
+  text-align: left;
+  width: 80%;
+  padding: 5px 0 5px 20px;
+  line-height: 1.5rem;  
+}
+main .pan {
+  display: flex;
+  margin: 0 auto;
+  padding: 50px 50px;
+  justify-content: center;
+  gap: 30px;
+  align-items: flex-end;
+  width: 80%;
+}
+.pan img {
+  width: 500px;
+  height: 100%;
+}
+main .pan .under {
+  display: flex;
+  flex-direction: column;
+}
+main .pan .bun {
+  display: flex;
+  margin: auto
+}
+main .pan p {
+  display: inline-block; 
+}
+main .pan>li {
+  overflow: hidden;
+}
+main .pan>li>img {
+	transition: all .1s linear;
+  filter: brightness(50%);
+}
+main .pan>li>img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+.syasin {
+  display: none;
+}
+/* =============
+-===============banners関係 */
+main section #banners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bannerInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  padding:  10px 0;
+}
+.bannerInner>img{
+  width: 250px;
+}
+.bannerInner>a{
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.bannerInner .banapan {
+  display: none;
+}
+/* .bannerInner .banapan {
+  display: none;
+} */
+.bannerInner>figcaption {
+  align-items: center;
+  padding: 10px;
+}
+main .detail {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--main-color);
+/*   font-size: 18px; */
+}
+
+/* ========================================
+=======================contact page======= */
+main #contact {/* 見出しcontact */
+  letter-spacing: 14px;
+  font-size: 60px;
+  margin-top: 100px;
+  padding-top: 100px;
+  color: #fff;
+}
+#forBg {
+  background-image: url("../img/flower.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.form {
+  width: 770px; 
+  height: 1050px;
+  padding-top: 50px;
+  box-shadow:  5px 5px 18px #142128,-5px -5px 18px #304f5e;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+  /* ----------------------------------
+  ------------------------footer---- */
+footer #FooterIn {
+  width: auto;
+  margin: 0 auto;
+}
+footer small {
+background-color: #fff;
+display: block;
+text-align: center;
+padding: 50px 0;
+letter-spacing: 2px;
+}
+footer::before {
+  content: '';
+  display: block;
+  border-right: 97vw solid transparent;
+  border-bottom: 2vw solid #ffffff;
+}
+/*ーーーーーーーーーーーーーーーーーーーーーーーー
+ーーーーーーーーーーーーーーーーーー固定アイコン */
+#arrow {
+  position:fixed;
+  right: 50px;
+  bottom: 20px;
+  display: none;
+  z-index: 100;
+}
+#arrow.view {
+  opacity: 1.0;
+}
+#arrow a {
+    color: var(--main-color);
+    border: .5px solid var(--main-color);;
+    background-color:transparent;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: .3s all linear;
+}
+#arrow a:hover {
+    border: 1px solid #fff;
+    background: #b4b4b463;
+    color: #fff;
+}
+
+/* ========================
+===================固定btN */
+  .scroll {/* スクロールbtn */
+    position: absolute;
+    bottom: -20px;
+    left: 48%;
+    z-index: 3;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+    padding-top: 60px;
+    color: #fff;
+  }
+  .scroll span {
+    position: absolute;
+    top: 0;
+    left: 48%;
+    width: 20px;
+    height: 20px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+  }
+  @-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+  }
+  @keyframes sdb {
+  0% {
+    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }}
+
+/* レスポンス！=============
+================================= */
+
+
+@media screen and (max-width:599px) {
+/* 固定たち */
+html {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 500;
+  font-weight: nomal;
+  color: #999;
+  font-size: 12px;
+
+}
+.scroll {/* スクロールbtn */
+  color: #ffffffbd;
+  left: 47%;
+}
+.scroll span {
+  border-left: 1px solid #ffffffbd;
+  border-bottom: 1px solid #ffffffbd;
+  left: 47%;
+}
+.sideber,#arrow {
+  opacity: 0;
+}
+#bottomBar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+  transition: .5s;
+  z-index: 10;
+}
+#bottomBar li {
+  display: inline-block;
+  background-color:#f0f0f0ea;
+  box-shadow: inset 5px -5px 7px #e6e6e6,
+  inset -5px 5px 7px #fafafa;
+  width: calc(100% * 4);
+  transition: .1s all linear;
+}
+#bottomBar li a {
+  text-align: center;
+  display: block;
+  padding: 20px 0;
+  color: #adadad;
+}
+header h1 {
+  font-size: 32px;
+}
+/* =============--
+================Me */
+header #headerBg {
+  height: 100vh;/* 一画面に変更なら１００ｖｈ */
+}
+main #me,#works {/* h2たちのこと */
+  letter-spacing: 15px;
+  font-size: 50px;
+  padding: 100px 0;
+  color: #223843;
+} 
+main section .mySelf {
+  width: 90%;
+  padding:0px;
+  border-radius: none;
+}
+main section .twoset {
+  gap: 20px;
+  flex-direction: column;
+  padding: 20px 0;
+}
+main section .twoset>li {
+  width: 80%;
+  align-items: center;
+  }
+main section .twoset li>.selfie {
+  border-radius: 10%;
+  box-shadow:  5px 5px 3px #c3bcc0;
+}
+.logotitle {
+  color: #223843;
+  text-align: center;
+  padding: 10px 0;
+}
+main section #logos{
+  align-items: center;
+  text-align: center;
+  padding: 30px 10px;
+  gap: 5px;
+}
+/* ======================-
+===========-work */
+main .pan .under,video {
+display: none;
+}
+main h3 {/* bana-はこちらバー */
+  padding: 10px 30px;
+  margin: 100px 0;
+  font-size: 12px;
+  color: #fff;
+}
+/* SITEたち↓ */
+.title {
+  padding: 40px 0 ;
+  font-size: 20px;
+}
+main .pan {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px 50px;
+  gap: 30px;
+  width: 90%;
+}
+.syasin {
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+  height: 200px;
+}
+main .pan>li>img,main .pan>li>img:hover {
+	transition: none;
+  filter: none;
+  transform: none;
+}
+#res,#res2,#res3 {
+  display: none;
+}
+.webdetail {
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  color: none;
+}
+/* バナーたち↓ */
+main section .mine {
+  padding: 50px 5px;
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.bannerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding:  10px 0;
+  margin: 0 20px;
+}
+.bannerInner>img{
+  width: 200px;
+}
+.bannerInner>a{
+  display: none;
+/*   width: 400px; */
+}
+.bannerInner .banapan {
+  display: flex;
+}
+.bannerInner>figcaption {
+    align-items: center;
+    padding: 10px;
+  }
+main .detail {
+  margin-top: 10px;
+  display: flex;
+  color: var(--main-color);
+/*   font-size: 18px; */
+}
+main .detail>dt {
+  width: 20%;
+  margin-top: 10px;
+  text-align: right;
+}
+main .detail>dd {
+  border-bottom: 1px dotted rgb(126, 126, 126);
+  text-align: left;
+  width: 80%;
+  padding: 5px 0 5px 20px;
+  line-height: 1.5rem;  
+}
+
+/* ================
+===========contact */
+main #contact {/* h２contactのこと */
+  letter-spacing: 10px;
+  font-size: 60px;
+  color: #fff;
+  padding: 0;
+  margin: 75px 0;
+}
+#forBg {
+  background-image: url("../img/flower.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size:contain;
+}
+.form {
+  width: 100%; 
+  height: 1100px;
+  padding: 10;
+  box-shadow:none;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/* ================
+============footer */
+footer::before {
+  content: '';
+  display: block;
+  border-right: 97vw solid transparent;
+  border-bottom: 2vw solid #ffffff;
+}
+footer small {
+  margin-top: 0;
+  padding: 80px;
+}}
