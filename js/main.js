@@ -1,12 +1,25 @@
-'use strict';
+'use strict';/* scrollReaveのん */
 ScrollReveal().reveal('.huwa',{duration:3000,reset:true});/* for h1 */
 ScrollReveal().reveal('.slide',{distance:'300px',origin:'left',reset:true});/* for h2 */
 ScrollReveal().reveal('h3',{interval:200,distance:'400px',origin:'left',reset:true});/*h３*/
 ScrollReveal().reveal('.logo1,.logo2,.logo3,.logo4,.logo5,.logo6,.logo7,.logo8',{interval:200,distance:'10px',origin:'top',reset:true});/* loggos */
 ScrollReveal().reveal('.right',{duration:3000,distance:'50px',origin:'left',reset:true});/* for .right*/
-ScrollReveal().reveal('figure',{distance:'150px',origin:'bottom',reset:true});/* for banner  */
+/* TOPへもどるbtn */
+const botan = document.querySelector('#arrow');
+botan.addEventListener('click',scroll_to_top);
+function scroll_to_top(){
+  window.scroll({top: 0, behavior: 'smooth'});
+};
+window.addEventListener('scroll',scroll_event);
+function scroll_event(){
+  if(window.pageYOffset > 400){
+    botan.style.opacity = '1';
+  }else if(window.pageYOffset < 400){
+    botan.style.opacity = '0';
+  }
+};
 
-
+/* レスポンシブバー*/
 let startPos = 0, winScrollTop = 0;
 window.addEventListener('scroll', ()=>{
     winScrollTop = this.scrollY;
@@ -20,20 +33,7 @@ window.addEventListener('scroll', ()=>{
     startPos = winScrollTop;
 });
 
-
-
-$(function(){
-const topBtn = $('#arrow');
-$(window).on('scroll',function() {
-	if ($(this).scrollTop() > 500) {
-		topBtn.fadeIn();
-	} else {
-		topBtn.fadeOut();
-	}
-});
-
-});/* 大元function */
-
+/* レスポンシブ背景 */
 if (window.matchMedia('(max-width: 599px)').matches) {
   window.addEventListener("scroll", ()=> {/* for backgroundColor */
     let scroll = window.pageYOffset;
@@ -41,7 +41,7 @@ if (window.matchMedia('(max-width: 599px)').matches) {
     if (scroll > 10000) {
       document.body.style.backgroundColor = '#223843';
       /* contact */
-    } else if (scroll > 5200) {
+    } else if (scroll > 5400) {
       document.body.style.backgroundColor = '#223843';/* contact */
     } else if (scroll > 1000) {
       document.body.style.backgroundColor = '#fff';/* works #fff*/
@@ -58,7 +58,7 @@ if (window.matchMedia('(max-width: 599px)').matches) {
     if (scroll > 10000) {
       document.body.style.backgroundColor = '#223843';
       /* contact */
-    } else if (scroll > 5500) {
+    } else if (scroll > 5700) {
       document.body.style.backgroundColor = '#223843';/* contact */
     } else if (scroll > 1300) {
       document.body.style.backgroundColor = '#fff';/* works #fff*/
