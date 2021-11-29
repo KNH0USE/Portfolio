@@ -1,7 +1,7 @@
 @charset "utf-8" ;
 /* * { 
   border: 1px solid #000;
-}  */
+} */ 
 
 :root {
   --main-color: #666666;
@@ -220,7 +220,14 @@ main .pan .under {
 }
 main .pan .bun {
   display: flex;
-  margin: auto
+  margin: auto;
+  padding: 5px;
+}
+main .pan .bun a {
+  border-bottom: 2px dotted #000;
+}
+main .pan .bun a:hover {
+  opacity: .5;
 }
 main .pan p {
   display: inline-block; 
@@ -286,10 +293,10 @@ main .detail {
 /* ========================================
 =======================contact page======= */
 main #contact {/* 見出しcontact */
-  letter-spacing: 14px;
+  letter-spacing: 15px;
   font-size: 60px;
-  margin-top: 100px;
-  padding-top: 100px;
+  margin-top: 200px;
+  padding-top: 200px;
   color: #fff;
 }
 #forBg {
@@ -299,14 +306,13 @@ main #contact {/* 見出しcontact */
   background-size: contain;
 }
 .form {
-  width: 770px; 
+  width: 80%; 
   height: 1050px;
   padding-top: 50px;
   box-shadow:  5px 5px 18px #142128,-5px -5px 18px #304f5e;
   margin-top: 200px;
   margin-bottom: 200px;
 }
-
   /* ----------------------------------
   ------------------------footer---- */
 footer #FooterIn {
@@ -332,12 +338,11 @@ footer::before {
   position:fixed;
   right: 50px;
   bottom: 20px;
-  display: none;
+	opacity: 0;
+	transition-duration: 0.5s;
   z-index: 100;
 }
-#arrow.view {
-  opacity: 1.0;
-}
+
 #arrow a {
     color: var(--main-color);
     border: .5px solid var(--main-color);;
@@ -436,7 +441,7 @@ html {
   left: 47%;
 }
 .sideber,#arrow {
-  opacity: 0;
+  display: none;
 }
 #bottomBar {
   position: fixed;
@@ -603,11 +608,10 @@ main .detail>dd {
 /* ================
 ===========contact */
 main #contact {/* h２contactのこと */
+	margin-top: 100px;
   letter-spacing: 10px;
   font-size: 60px;
   color: #fff;
-  padding: 0;
-  margin: 75px 0;
 }
 #forBg {
   background-image: url("../img/flower.jpg");
